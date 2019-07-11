@@ -1,11 +1,11 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-const { width } = Dimensions.get('window');
+import * as defaults from '../../helpers/DefaultValues';
 
 export default StyleSheet.create({
-    centeredAreaContainerStyle: {
-        width,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
+  centeredAreaContainerStyle: {
+    width: defaults.WIDTH,
+    alignItems: 'center',
+    justifyContent: 'center'
+  }
 });

@@ -5,6 +5,9 @@ import Swiper from 'react-native-swiper';
 import styles from './styles';
 import * as colors from '../helpers/ColorPalette';
 import * as defaults from '../helpers/DefaultValues';
+import { CenteredArea } from '../components/CenteredAreas';
+import { BackHeader, HomeHeader } from '../components/Headers';
+import { petTypeFormatter, cityFormatter } from '../helpers/Formatter';
 
 class ResultsPage extends Component {
   state = {};
@@ -40,8 +43,13 @@ class ResultsPage extends Component {
   };
 
   render() {
+    const { navigation } = this.props;
+    const ad = navigation.getParam('ad', null);
+
     return (
       <View style={styles.resultDetailPageContainerStyle}>
+        <BackHeader />
+        <HomeHeader />
         <View style={styles.resultDetailPageSwiperContainerStyle}>
           <Swiper
             loop={false}
@@ -53,6 +61,17 @@ class ResultsPage extends Component {
             {this.handleImages()}
           </Swiper>
         </View>
+
+        <CenteredArea>
+          <Text style={{ fontSize: 32, textAlign: 'center' }}>{ad.title}</Text>
+        </CenteredArea>
+        <Text>{ad.content}</Text>
+        <Text>{ad.age}</Text>
+        <Text>{cityFormatter(ad.city)}</Text>
+        <Text>{ad.district}</Text>
+        <Text>{petTypeFormatter(ad.petType)}</Text>
+        <Text>{ad.petBrand}</Text>
+        <Text>{ad.phone}</Text>
       </View>
     );
   }

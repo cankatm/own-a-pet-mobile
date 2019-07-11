@@ -3,8 +3,12 @@ import { Text, View, Dimensions, FlatList } from 'react-native';
 
 import { getAllAds } from '../helpers/api/ads';
 import styles from './styles';
-import { dummyUsers } from '../helpers/DummyUsers';
 import { PetResultItem } from '../components/SearchResultItems';
+import {
+  StaticLogoHeader,
+  BackHeader,
+  HomeHeader
+} from '../components/Headers';
 
 class ResultsPage extends Component {
   state = {
@@ -30,8 +34,11 @@ class ResultsPage extends Component {
 
     return (
       <View style={styles.resultsPageContainerStyle}>
+        <BackHeader />
+        <HomeHeader />
         <FlatList
           data={ads}
+          ListHeaderComponent={<StaticLogoHeader />}
           renderItem={({ item, index }) => (
             <PetResultItem index={index} ad={item} />
           )}

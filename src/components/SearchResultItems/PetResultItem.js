@@ -6,10 +6,11 @@ import styles from './styles';
 import { CenteredArea } from '../CenteredAreas';
 import * as colors from '../../helpers/ColorPalette';
 import * as defaults from '../../helpers/DefaultValues';
-
-import dog from '../../../assets/images/dog.png';
-import cat from '../../../assets/images/cat.png';
-import bird from '../../../assets/images/bird.png';
+import {
+  petTypeFormatter,
+  petImageFormatter,
+  cityFormatter
+} from '../../helpers/Formatter';
 
 class PetResultItem extends Component {
   render() {
@@ -29,13 +30,15 @@ class PetResultItem extends Component {
             <View style={styles.petResultItemInfoContainerStyle}>
               <Image
                 style={styles.petResultItemPetImageStyle}
-                source={dog}
+                source={petImageFormatter(ad.petType)}
                 resizeMode='cover'
               />
               <View style={styles.petResultPetInfoContainerStyle}>
-                <Text>{ad.petType}</Text>
+                <Text>
+                  {petTypeFormatter(ad.petType)} / {ad.petBrand}
+                </Text>
                 <Text style={{ marginTop: 8 }}>
-                  {ad.district} / {ad.city}
+                  {ad.district} / {cityFormatter(ad.city)}
                 </Text>
               </View>
             </View>
