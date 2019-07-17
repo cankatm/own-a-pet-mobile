@@ -1,6 +1,14 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-import { LoginPage, ResultsPage, ResultDetailPage } from '../pages';
+import {
+  HomePage,
+  LoginPage,
+  SignAvatarPage,
+  MyProfilePage,
+  NewOrUpdateAdPage,
+  ResultsPage,
+  ResultDetailPage
+} from '../pages';
 
 //Animation
 const FadeTransition = (index, position) => {
@@ -31,9 +39,13 @@ const NavigationConfig = () => {
 
 const MainNavigatorWithoutContainer = createStackNavigator(
   {
+    HomePage: { screen: HomePage },
+    LoginPage: { screen: LoginPage },
+    SignAvatarPage: { screen: SignAvatarPage },
+    NewOrUpdateAdPage: { screen: NewOrUpdateAdPage },
+    MyProfilePage: { screen: MyProfilePage },
     ResultsPage: { screen: ResultsPage },
-    ResultDetailPage: { screen: ResultDetailPage },
-    LoginPage: { screen: LoginPage }
+    ResultDetailPage: { screen: ResultDetailPage }
   },
   {
     transitionConfig: NavigationConfig,

@@ -38,7 +38,7 @@ class PetResultItem extends Component {
                   {petTypeFormatter(ad.petType)} / {ad.petBrand}
                 </Text>
                 <Text style={{ marginTop: 8 }}>
-                  {ad.district} / {cityFormatter(ad.city)}
+                  {ad.district} / {ad.city}
                 </Text>
               </View>
             </View>

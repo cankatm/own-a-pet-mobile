@@ -67,7 +67,7 @@ class ResultsPage extends Component {
         </CenteredArea>
         <Text>{ad.content}</Text>
         <Text>{ad.age}</Text>
-        <Text>{cityFormatter(ad.city)}</Text>
+        <Text>{ad.city}</Text>
         <Text>{ad.district}</Text>
         <Text>{petTypeFormatter(ad.petType)}</Text>
         <Text>{ad.petBrand}</Text>

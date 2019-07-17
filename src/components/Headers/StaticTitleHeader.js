@@ -3,14 +3,17 @@ import { View, Text } from 'react-native';
 
 import styles from './styles';
 
-class StaticLogoHeader extends Component {
+class StaticTitleHeader extends Component {
   render() {
+    const { headerTitle } = this.props;
     return (
       <View style={styles.staticLogoHeaderContainerStyle}>
-        <Text style={styles.staticLogoHeaderTitleStyle}>Own A Pet</Text>
+        <Text style={styles.staticLogoHeaderTitleStyle}>
+          {headerTitle || 'Own A Pet'}
+        </Text>
       </View>
     );
   }
 }
 
-export default StaticLogoHeader;
+export default StaticTitleHeader;

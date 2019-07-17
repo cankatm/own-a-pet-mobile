@@ -5,7 +5,7 @@ import { getAllAds } from '../helpers/api/ads';
 import styles from './styles';
 import { PetResultItem } from '../components/SearchResultItems';
 import {
-  StaticLogoHeader,
+  StaticTitleHeader,
   BackHeader,
   HomeHeader
 } from '../components/Headers';
@@ -19,6 +19,8 @@ class ResultsPage extends Component {
   componentDidMount() {
     this.getAllAdsFromAPI();
   }
+
+  componentWillUnmount() {}
 
   getAllAdsFromAPI = async () => {
     try {
@@ -38,7 +40,7 @@ class ResultsPage extends Component {
         <HomeHeader />
         <FlatList
           data={ads}
-          ListHeaderComponent={<StaticLogoHeader />}
+          ListHeaderComponent={<StaticTitleHeader />}
           renderItem={({ item, index }) => (
             <PetResultItem index={index} ad={item} />
           )}

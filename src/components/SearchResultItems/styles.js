@@ -1,9 +1,9 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
 import * as colors from '../../helpers/ColorPalette';
-const { width } = Dimensions.get('window');
+import * as defaults from '../../helpers/DefaultValues';
 
-const CARD_SIZE = width - 32;
+const CARD_SIZE = defaults.WIDTH - 32;
 const BORDER_SIZE = 1;
 const BORDER_RADIUS = 12;
 
@@ -41,5 +41,32 @@ export default StyleSheet.create({
   petResultPetInfoContainerStyle: {
     marginRight: 8,
     alignItems: 'flex-end'
+  },
+  profilePageResultItemContainerStyle: {
+    width: defaults.WIDTH - 64,
+    borderRadius: 12,
+    borderWidth: 3,
+    borderColor: colors.orange_oap,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginTop: 16
+  },
+  profilePageResultItemImageContainerStyle: {
+    width: 64,
+    height: 64,
+    margin: 16,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: colors.black,
+    overflow: 'hidden'
+  },
+  profilePageResultItemImageStyle: {
+    width: 64,
+    height: 64
+  },
+  profilePageResultItemTextStyle: {
+    fontSize: 14,
+    marginRight: 16
   }
 });

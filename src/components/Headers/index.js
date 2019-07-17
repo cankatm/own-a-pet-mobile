@@ -1,5 +1,5 @@
-import StaticLogoHeader from './StaticLogoHeader';
+import StaticTitleHeader from './StaticTitleHeader';
 import BackHeader from './BackHeader';
 import HomeHeader from './HomeHeader';
 
-export { StaticLogoHeader, BackHeader, HomeHeader };
+export { StaticTitleHeader, BackHeader, HomeHeader };

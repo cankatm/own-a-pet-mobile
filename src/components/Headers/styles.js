@@ -19,7 +19,7 @@ export default StyleSheet.create({
   },
   staticLogoHeaderTitleStyle: {
     fontSize: 24,
-    color: colors.green_oap
+    color: colors.black
   },
   //BACK HEADER
   backHeaderContainerStyle: {
@@ -32,9 +32,11 @@ export default StyleSheet.create({
     width: ICON_CONTAINER_SIZE,
     height: ICON_CONTAINER_SIZE,
     borderRadius: ICON_CONTAINER_SIZE / 2,
-    backgroundColor: colors.green_oap,
+    backgroundColor: colors.orange_oap,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    borderWidth: 3,
+    borderColor: colors.black
   },
   backHeaderIconImageStyle: {
     width: ICON_SIZE,
@@ -51,9 +53,11 @@ export default StyleSheet.create({
     width: ICON_CONTAINER_SIZE,
     height: ICON_CONTAINER_SIZE,
     borderRadius: ICON_CONTAINER_SIZE / 2,
-    backgroundColor: colors.green_oap,
+    backgroundColor: colors.orange_oap,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    borderWidth: 3,
+    borderColor: colors.black
   },
   homeHeaderIconImageStyle: {
     width: ICON_SIZE,
